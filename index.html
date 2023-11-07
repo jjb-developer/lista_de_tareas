@@ -1,15 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/javascript.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Template</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/main.js"></script>
-  </body>
+<head>
+   <meta charset="UTF-8" />
+   <link rel="icon" type="image/svg+xml" href="/javascript.svg" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>Template</title>
+   <script src="https://cdn.tailwindcss.com"></script>
+   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body class='w-full min-h-screen h-[100%] bg-[#1d3557] text-[#a8dadc]'>
+   <div class='w-full h-[inherit] flex justify-center py-16'>
+      <div class='w-96 h-fit'>
+         <div>
+            <div class='flex flex-col gap-y-2'>
+               <span id='fecha' class='text-sm font-semibold text-[#457b9d]'>Noviembre 6, 2023</span>
+               <div>
+                  <h1 class='capitalize text-3xl font-semibold tracking-tight text-[#f1faee]'>Hola, José Pereira</h1>
+                  <h2 class='font-semibold text-sm text-[#457b9d]'>Vamos a cumplir tus metas</h2>
+               </div>
+            </div>
+            <div class='py-5'>
+               <div class='relative flex items-center'>
+                  <input type="text" name="task" id='task' autocomplete="off" maxlength='30' class='border-2 rounded-xl rounded-tl rounded-br py-2.5 px-3 outline-none focus:border-sky-500 duration-200 tracking-wide text-zinc-500 w-full'/>
+                  <i id='btn' class='bx bxs-plus-circle absolute top-1/2 -translate-y-1/2 right-2 text-[#e63946] text-3xl cursor-pointer'></i>
+               </div>
+            </div>
+         </div>
+         <div>
+            <h3 id='msj_task' class='font-semibold text-[#457b9d]'></h3>
+            <div id='tasks' class='flex flex-col gap-y-2 py-3'>
+            </div>
+         </div>
+      </div>
+   </div>
+   <script type="module" src="/main.js"></script>
+</body>
 </html>
