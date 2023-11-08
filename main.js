@@ -69,6 +69,11 @@ function msj(tareas){
 	msj.innerText = tareas === null || tareas === [] ? "No tienes tareas pendiente":"Estas son tus tareas pendientes"
 }
 
+const month = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre']
+
+const fecha = select('#fecha')
+const d = new Date()
+fecha.innerText = `${month[d.getMonth()]} ${d.getDate()}, ${d.getUTCFullYear()}`
 const btn = select('#btn')
 btn.addEventListener('click', addTarea )
 
